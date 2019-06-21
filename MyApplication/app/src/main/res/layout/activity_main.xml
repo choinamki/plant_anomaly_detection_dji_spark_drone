@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextureView
+        android:id="@+id/video_previewer_surface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dp" />\
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-4dp"
+        android:orientation="horizontal">
+
+        <com.dji.MyApplication.OnScreenJoystick
+            android:id="@+id/directionJoystickRight"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/joystick_bg" />
+
+        <Button
+            android:id="@+id/btn_take_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take Off" />
+
+        <Button
+            android:id="@+id/btn_land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Land" />
+
+        <ToggleButton
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Start Record"
+            android:textOff="Start Record"
+            android:textOn="Stop Record"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btn_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="media" />
+
+        <com.dji.MyApplication.OnScreenJoystick
+            android:id="@+id/directionJoystickLeft"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/joystick_bg" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_enable_stick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="143dp"
+        android:text="stick_enable"
+        android:layout_marginLeft="143dp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/btn_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="270dp"
+        android:text="map"
+        android:layout_marginLeft="270dp"
+        android:layout_alignParentLeft="true" />
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/video_previewer_surface"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="23dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
